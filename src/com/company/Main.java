@@ -1,32 +1,25 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-       double[] java = new double[15];
-       java[0] = -2.3;
-       java[1] = -3.8;
-       java[2] = -2.38;
-       java[3] = -8.66;
-       java[4] = -6.3;
-       java[5] = -2.223;
-       java[6] = -8.69;
-       java[7] = -9.9;
-       java[8] = 7.2;
-       java[9] = -4.5;
-       java[10] = 2.2;
-       java[11] = 8.5;
-       java[12] = -8.500;
-       java[13] = -9.1;
-       java[14] = 4.8;
-        for (double android: java) {
-            if (java[0] < 0){
-                System.out.println((java[8] + java[10] + java[11] + java[14]) / 4);
+        // write your code here
+        double[] java = {-2.3, 6.5, -8.6, 9.3, -8.5, 3.6, -6.2, 1.5, -8.9, 3.6, -96.23, 6.8, -5.99, 2.99, -3.6};
+        int onePiece = 0;
+        double marsel = 0.0;
+        boolean window = false;
+        for (double android : java) {
+            if (android < 0) {
+                window = true;
+
             }
-
+            else if (window){
+                onePiece++;
+                marsel += android;
+            }
         }
-
-
+        System.out.println("Среднее арифметичекое число = " + (marsel / onePiece));
     }
 }
